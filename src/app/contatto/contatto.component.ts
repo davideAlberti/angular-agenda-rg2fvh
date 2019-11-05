@@ -6,10 +6,10 @@ import { Contatto } from './contatto.model'
   templateUrl: './contatto.component.html',
   styleUrls: ['./contatto.component.css']
 })
-export class ContattoComponent implements OnInit {
-  contatto: Contatto 
+export class ContattoComponent{
+  contatto: Contatto = new Contatto('Davide', 'Alberti', 'davide.alberti@marconirovereto.it', '1234567890', 5)
 
-  ngOnInit() {
-    this.contatto = new Contatto('Davide', 'Alberti', 'davide.alberti@marconirovereto.it', '1234567890', 5)
+  setTextColor() {
+    return this.contatto.isPreferito ? "red" : "black"
   }
 }

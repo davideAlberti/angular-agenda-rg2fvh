@@ -13,7 +13,15 @@ export class Contatto {
     this.nStelle = nStelle
   }
 
-  getNomeCompleto(): string {
+  get getNomeCompleto(): string {
     return this.nome + ' ' + this.cognome
+  }
+
+  get isPreferito() {
+    return this.nStelle == 5
+  }
+
+  setPreferito() {
+    this.nStelle = 5
   }
 }
